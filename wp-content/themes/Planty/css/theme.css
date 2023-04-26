@@ -1,0 +1,8 @@
+/* Police: Syne */
+@font-face {
+	font-family: 'Syne';
+	src: url('../fonts/Syne-VariableFont_wght.ttf') format('truetype');
+  }
+body * {
+	font-family: 'Syne', 'Times New Roman', Times, serif;
+  }
