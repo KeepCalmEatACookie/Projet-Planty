@@ -6,7 +6,7 @@
 body * {
 	font-family: 'Syne', 'Times New Roman', Times, serif;
   }
-  #site-navigation #menu-item-450 a {
+  #site-navigation #menu-item-1390 a {
     background-color : #DC9F96; 
     height: 80px;
     width: 236px;
@@ -16,7 +16,7 @@ body * {
 	color: #ffffff;
 
 }
-#site-navigation #menu-item-450 a:hover {
+#site-navigation #menu-item-1390 a:hover {
     background-color : #c02e44; 
     
 }
@@ -59,11 +59,13 @@ body * {
 #left {
 	width: 383px;
 	float: left;
-	margin-right: 89px;
+	margin-right: 25px;
 }
 #right {
 	width: 383px;
 	float: left;
+    margin-left: 24px;
+    
 
 }
 .clearfix::after {
@@ -78,7 +80,7 @@ body * {
 .clearfix {
 	display:block;
 }
-#wpcf7-f992-p446-o2 .commander_btn {
+#wpcf7-f1263-p1282-o1 .commander_btn {
 	left: 40%;
     margin-top: 45px;
     position: relative;
@@ -89,7 +91,21 @@ body * {
     transition: .3s ease-in-out;
 	text-transform: capitalize;
 }
-#wpcf7-f992-p446-o2 .commander_btn:hover {
+#wpcf7-f1263-p446-o1 .commander_btn {
+    left: 40%;
+    margin-top: 45px;
+    position: relative;
+    background-color: #E0B9B4;
+    height: 55px;
+    width: 198px;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    text-transform: capitalize;
+}
+#wpcf7-f1263-p1282-o1 .commander_btn:hover {
+    background-color: #C02E44;
+}
+#wpcf7-f1263-p446-o1 .commander_btn:hover {
     background-color: #C02E44;
 }
 /*#wpcf7-f992-p446-o2 .clearfix hr {
@@ -123,24 +139,25 @@ form.wpcf7-form input[type=text] {
 /* Ajout pannier */
 
 .four-column {
-	width: 25%;
     display: flex;
+}
+.uacf7-form-1263 {
+    width: 860px;
 }
 
 #form-cmd {
     display: flex;
     justify-content: space-between;
     margin-top: 14.64px;
+    margin-bottom: 30px;
+
 }
-
-
 
 #form-cmd .champ_div {
     display: flex;
     width: 82px;
     margin-right: 11px;
 }
-
 #form-cmd div input {
     width: 51px;
     height: 56px;
@@ -149,6 +166,7 @@ form.wpcf7-form input[type=text] {
     font-weight: 400;
     text-align: center;
     background: white;
+    padding: 0;
 }
 #form-cmd div .ok {
     height: 56px;
@@ -169,7 +187,9 @@ form.wpcf7-form input[type=text] {
     display: flex;
     flex-direction: column;
 }
-
+.two-column{
+    margin-top: 54px;
+}
 .btn-number button {
     width: 31px;
     height: 28px;
@@ -177,17 +197,17 @@ form.wpcf7-form input[type=text] {
     font-weight: 400;
     font-size: 20px;
     font-family: 'Syne', sans-serif;
-    background-color: #E0B9B4;
+    background-color: #DC9F96;
     border: white;
 }
 button.btn-negative {
     border-top: 1px solid white;
-    border-radius: 0px 0px 4px 0px;
+    border-radius: 0px 0px 5px 0px;
     line-height: 10px;
 }
 button.btn-positive {
     border-bottom: 1px solid white;
-    border-radius: 0px 4px 0px 0px;
+    border-radius: 0px 5px 0px 0px;
     line-height: 10px;
 }
 /* Firefox */
@@ -264,4 +284,61 @@ input::-o-outer-spin-button {
 .image_footer {
     width: 1489px;
     height: 262px;
+}
+.two-column {
+	display: flex;
+	flex-direction: row;
+	column-gap: 20px
+}
+.two-column label {
+	min-width: 0;
+}
+
+
+/* Média Queries */
+
+@media screen and (max-width: 1024px) {
+
+    
+/*--- 2 Column Form Styles Start ---*/
+
+ 
+.clearfix:after {
+    content:"\0020";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+ 
+.clearfix {
+    display:block;
+}
+
+/*--- 2 Column Form Styles End ---*/
+
+}
+
+@media screen and (max-width: 860px) {
+   
+    #wpcf7-f992-p446-o2 .commander_btn {
+        left: 0%;
+    }
+    form.wpcf7-form h2 {
+    font-size: 26px;
+    }
+
+    #form-cmd .champ_div {
+        margin-right: 4px;
+    }
+    .four-column {
+        margin-right: 10px;
+    }
+    #form-cmd .champ_div {
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
