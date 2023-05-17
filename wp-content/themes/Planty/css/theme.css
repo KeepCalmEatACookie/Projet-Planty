@@ -293,6 +293,16 @@ input::-o-outer-spin-button {
 .two-column label {
 	min-width: 0;
 }
+#form-cmd div .btn-number button {
+    width: 31px;
+    height: 28px;
+    padding: 0px;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Syne', sans-serif;
+    background-color: #DC9F96;
+    border: white;
+}
 
 
 /* Média Queries */
