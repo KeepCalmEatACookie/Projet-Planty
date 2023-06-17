@@ -14,13 +14,12 @@ function theme_enqueue_styles()
  add_filter( 'wp_nav_menu_items', 'menu_item_admin', 10, 2 );
  function menu_item_admin ( $items, $args ) {
 		 // Contrôle si l'utilisateur est connecté avec la fonction is_user_logged_in()
-		 if (is_user_logged_in()) {
-			// si l'utilisateur est connecté, on initialise un tableau qui stockera la liste des items 
+			if (is_user_logged_in()) {
+		// si l'utilisateur est connecté, on initialise un tableau qui stockera la liste des items 
 			$items_array = array();
 			 
-			// Création d'une boucle pour récupérer la position actuel de chaque item (balise '<li') 
-			// avec '<li' comme point de repère dans la liste de items
-			// l'offset de 10, permet d'être sûr de ne pas prendre en compte le '<li' où on démarre
+		// Création d'une boucle pour récupérer la position actuelle de chaque item (balise '<li') avec '<li' comme point de repère dans la liste de items
+		// l'offset de 10, permet d'être sûr de ne pas prendre en compte le '<li' où on démarre
 			while ( false !== ( $item_pos = strpos ( $items, '<li', 10 ) ) ) {
 			// recupère uniquement la partie qui va de <li> jusqu'au <li> suivant et on le stock dans le tableau
 				$items_array[] = substr($items, 0, $item_pos);
